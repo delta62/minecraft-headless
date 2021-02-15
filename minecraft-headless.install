@@ -1,0 +1,8 @@
+post_install() {
+    chown -R minecraft:minecraft /opt/minecraft-headless
+
+    echo >&2 <<-EOM
+        Remember to accept the EULA before running the server. You can run the service
+        once, then update eula.txt in /opt/$pkgname before enabling the service.
+EOM
+}
